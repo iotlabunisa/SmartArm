@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Stream</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        img {
+            max-width: 100%; /* Ciascuna immagine occupa il 50% della larghezza */
+            max-height: 100vh; /* Ciascuna immagine occupa l'intera altezza */
+            margin: auto;
+            display: block;
+        }
+        @media only screen and (orientation: landscape) {
+            img {
+                width: 100%; /* Ciascuna immagine occupa il 100% della larghezza */
+                height: 100vh; /* Ciascuna immagine occupa l'intera altezza */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img id="camera1" src="http://192.168.1.200:81/stream" alt="Camera 1">
+       
+    </div>
+</body>
+</html>
